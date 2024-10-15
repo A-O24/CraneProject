@@ -1,0 +1,33 @@
+Write four tests for your project to verify it does what it was supposed to do.
+How? Pick your own style: automatic, manual, Given-When-Then, Behavior-driven, etc. Do some research and find ways to objectively verify the correctness of your design. Select what works best for your project.
+Where to start? Check your project definition. It will tell you what you wanted to achieve.
+This is an individual assignment. You should each have your own answers, not copied from others.
+Test 1:
+Given: An LCD screen being used
+When: a controller is being connected
+Then: The bluetooth logo appears to demonstrate device pairing.
+
+
+Test 2:
+Given: The controller to function the crane
+When: Inputting double up or down
+Then: It’ll switch between servos and keep the original position / saved position.
+
+
+Test 3:
+Given: The LCD screen is visible to the user
+When: Switching between servos / 
+Then: LCD will output servo number in correspondence to which one is being controlled. (Will be mentioned in user manual / explained more)
+
+
+
+Test 4:
+Given: The STL file to create / make the crane’s structure
+When: 3D printing / making sure measurements are true to size in order to make sure the servos fit.
+Then: we will proceed to assemble the crane with screws/ make our prototype.
+
+
+Test 5:
+Given: The Controller used to pinch and close the crane
+When: Turning the joystick clockwise or counterclockwise
+Then: The crane’s claw will close and open in response to the direction.
