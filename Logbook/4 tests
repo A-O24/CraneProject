@@ -1,0 +1,15 @@
+Given: a servo is connected to each joint in the arm of the crane.
+When: the user inputs left or right on the joystick.
+Then: the joint of the arm rotates counterclockwise or clockwise, respectively; the servo should be able to move the rest of the arm that it is connected to.
+
+Given: a servo is connected to each joint in the arm of the crane.
+When: the user inputs up or down on the joystick.
+Then: the joint/servo that is controlled by the user changes in the direction that the user inputted.
+
+Given: an lcd is attached to the base of the crane.
+When: the crane is turned on, or the user is interacting with the crane.
+Then: the lcd displays relevant information to the user (which joint the user is controlling, battery life, time).
+
+Given: a claw/pincer-type mechanism is attached to the end of the arm of the crane.
+When: the user clicks and holds one button (ex. “A” button) and then clicks and holds another button (ex. “B” button).
+Then: the space between the claw closes and can pinch on an object and when moving the crane the object should stay in the claw’s grasp; the claw will then release its grip upon the user’s second input and allow the object to be let go from the claw.
