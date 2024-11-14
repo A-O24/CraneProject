@@ -2,8 +2,11 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+
+//OLED display size
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
+const int pb1 = 4;
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
@@ -80,19 +83,46 @@ const unsigned char myBitmap [] PROGMEM = {
 
 void setup() 
 {
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3c);
+  pinMode(pb1, INPUT_PULLUP);
+
+
 
   // put your setup code here, to run once:
+
+}
+void BluetoothTxt()
+{
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3c);
+  display.clearDisplay();
+
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(0,0);
+  display.println("Bluetooth");
+  display.println("Conected");
+  
+
+  display.display();
+  delay(5000);
 
 }
 
 void loop() 
 {
-  display.clearDisplay();
-  display.drawBitmap(0, 0, myBitmap,128, 64,1);
-  display.display();
-  delay(5000);
-  display.clearDisplay();
+  // placeholder for connrectivty checking to see if it works
+  
+  if(digitalRead(pb1) == 0)
+  {
+    // referencing the bluetooth txt
+    BluetoothTxt();
+
+
+    display.clearDisplay();
+    display.drawBitmap(0, 0, myBitmap,128, 64,1);
+    display.display();
+    delay(5000);
+    display.clearDisplay();
+  }
 
 
   // put your main code here, to run repeatedly:
